@@ -1,4 +1,4 @@
-# RAG (Retrieval-Augmented Generation) system - a complete RAG pipeline end-to-end
+# RAG (Retrieval-Augmented Generation) system
 
 ## Features
 * Document chunking (Agentic Chunking)
@@ -12,11 +12,13 @@
 A virtual environment isolates your project's packages from other Python projects, avoiding version conflicts:
 
 ```bash
+# Clone the repository
+git clone https://github.com/tuzzo18/RAG-system.git
 # Navigate to the project
-cd /home/<username>/RAG-system/rag-pipeline
-# Create virtual enviornment
+cd RAG-system/rag-pipeline
+# Create a virtual enviornment
 python3 -m venv venv
-# Activate virtual environment. You'll see (venv) in your terminal when active.
+# Activate the virtual environment. You will see (venv) in your terminal when active.
 source venv/bin/activate
 # Now install the required Python packages (see 2. Installation)
 ```
@@ -28,7 +30,7 @@ source venv/bin/activate
 > 
 > Thus, you need to obtain an OpenRouter API key first. To keep your API key secure, it will be stored in a `.env` file (that will not be committed to version control).
 > 
-> Create a `.env` file in the project root directory:
+> Create a `.env` file in the project root directory (/RAG-system):
 > 
 > `OPENROUTER_API_KEY=your-api-key-here`
 > 
@@ -39,6 +41,9 @@ source venv/bin/activate
 Within the virtual environment, install the required Python packages directly. This cell is self-contained, no external `requirements.txt` needed:
 
 ```bash
+# Activate the virtual environment (if not already active)
+source venv/bin/activate
+# Install dependencies
 pip install python-dotenv langchain-openai langchain-core pandas chromadb sentence-transformers
 ```
 
@@ -89,4 +94,13 @@ response_generation.py
 This is the complete RAG pipeline in action. Here is where all the components work together, from document loading to response generation.
 ```
 main.py
+```
+
+---
+
+### Running the pipeline
+
+To run the complete RAG pipeline, within the virtual environment, run `main.py`:
+```
+python3 main.py
 ```
