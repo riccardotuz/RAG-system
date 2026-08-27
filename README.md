@@ -13,7 +13,7 @@ A virtual environment isolates your project's packages from other Python project
 
 ```bash
 # Clone the repository
-git clone https://github.com/tuzzo18/RAG-system.git
+git clone https://github.com/riccardotuz/RAG-system.git
 # Navigate to the project
 cd RAG-system/rag-pipeline
 # Create a virtual enviornment
